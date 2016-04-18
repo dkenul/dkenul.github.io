@@ -57,8 +57,8 @@
         //  ADD URL TO LINK HERE - Currently not in the API
       } else {
          num = i + articlesIndex + 1;
-         top.textContent = objects[i].metadata.title;
-         bottom.textContent = objects[i].metadata.longTitle;
+         top.textContent = objects[i].metadata.longTitle;
+         bottom.textContent = objects[i].metadata.title;
          duration.textContent = parseTime(objects[i].metadata.duration);
          link.href = objects[i].metadata.url;
       }
