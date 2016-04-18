@@ -56,7 +56,7 @@
          bottom.textContent = objects[i].metadata.subHeadline;
         //  ADD URL TO LINK HERE - Currently not in the API
       } else {
-         num = i + articlesIndex + 1;
+         num = i + videosIndex + 1;
          top.textContent = objects[i].metadata.longTitle;
          bottom.textContent = objects[i].metadata.title;
          duration.textContent = parseTime(objects[i].metadata.duration);
