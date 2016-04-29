@@ -7,6 +7,7 @@ const SHIPS = {
 }
 
 function Game(name1, name2) {
+
   this.player1 = new Player(name1 || "Player 1");
   this.player2 = new Player(name2 || "Player 2");
   this.currentPlayer = this.player1;
@@ -105,23 +106,19 @@ function Player(name) {
     var shipLength = SHIPS[type];
     var grid = this.board.grid;
 
-    if (orientation == "horizontal") {
-      for (var i = 0; i < shipLength; i++) {
-        var target = grid[y][x + i];
-        if (target) {
-          tiles.push(target);
-        } else {
-          throw "Ship is off the board";
-        }
+    for (var i = 0; i < shipLength; i++) {
+      var target;
+
+      if (orientation == "horizontal") {
+         target = grid[y][x + i];
+      } else {
+        target = grid[y + i][x];
       }
-    } else {
-      for (var i = 0; i < shipLength; i++) {
-        var target = grid[y + i][x];
-        if (target) {
-          tiles.push(target);
-        } else {
-          throw "Ship is off the board";
-        }
+
+      if (target) {
+        tiles.push(target);
+      } else {
+        throw "Ship is off the board";
       }
     }
 
@@ -131,5 +128,4 @@ function Player(name) {
 
     this.ships.push(new Ship(tiles));
   }
-
 }
