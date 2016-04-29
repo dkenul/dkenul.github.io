@@ -24,7 +24,8 @@ h1, h2, h3, p, strong, em, a, ul, div, img, iframe {
 
 #game {
   width: 1200px;
-  margin: 0 auto;
+  margin: 50px auto;
+  border: 2px solid grey;
 }
 
 #game > div {
@@ -32,8 +33,6 @@ h1, h2, h3, p, strong, em, a, ul, div, img, iframe {
   width: 600px;
   height: 600px;
   box-sizing: border-box;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
 }
 
 .board {
@@ -43,6 +42,11 @@ h1, h2, h3, p, strong, em, a, ul, div, img, iframe {
 h1 {
   font-size: 2em;
   text-align: center;
+}
+
+h1.current {
+  color: green;
+  text-decoration: underline;
 }
 
 .tile {

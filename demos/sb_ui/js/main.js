@@ -1,7 +1,7 @@
 (function () {
 
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-  const LOAD_AMT = 10;
+  const LIMIT = 10;
 
   var articleCount = 0;
   var moreArticles = true;
@@ -45,9 +45,9 @@
 
   $(document).on('scroll mousewheel DOMMouseScroll MozMousePixelScroll', function() {
     if(moreArticles && !loading && $(window).scrollTop() == $(document).height() - $(window).height()) {
-      apiCall(LOAD_AMT, articleCount);
+      apiCall(LIMIT, articleCount);
     }
   });
 
-  apiCall(LOAD_AMT, 0);
+  apiCall(LIMIT, 0);
 })();

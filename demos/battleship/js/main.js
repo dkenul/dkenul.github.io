@@ -42,6 +42,16 @@
     }
   }
 
+  function highlightPlayer() {
+    if (game.currentPlayer == game.player1) {
+      $('#player2 > h1').removeClass("current");
+      $('#player1 > h1').addClass("current");
+    } else {
+      $('#player1 > h1').removeClass("current");
+      $('#player2 > h1').addClass("current");
+    }
+  }
+
   function init() {
     game.player1.placeShip("carrier", "vertical", 0, 3);
     game.player1.placeShip("battleship", "horizontal", 2, 5);
@@ -73,6 +83,8 @@
           } else {
             $(this).css("background", "white");
           }
+
+          highlightPlayer();
         }.bind(this));
       } catch(error) {
         $('#error').text(error);
