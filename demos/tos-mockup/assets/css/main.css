@@ -1,0 +1,171 @@
+html, body, section, article, header,
+h1, h2, h3, p, strong, em, a, ul, div, img {
+ margin: 0;
+ border: 0;
+ padding: 0;
+ outline: 0;
+
+ box-sizing: inherit;
+ font: inherit;
+ text-decoration: inherit;
+ text-align: inherit;
+ color: inherit;
+
+ background: transparent;
+ list-style: none;
+ display: block;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  font-family: Helvetica;
+  background: #fafafa;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  background: #292929;
+}
+
+.left {
+  float: left;
+  font-size: 2em;
+  color: #8999cd;
+  font-family: 'Chewy', cursive;
+}
+
+.right {
+  margin-top: 9px;
+  float: right;
+  font-size: 1em;
+  color: white;
+}
+
+.user {
+  font-size: 1.2em;
+  color: #e35a0f;
+}
+
+section {
+
+}
+
+form {
+  margin-top: 20px;
+}
+
+.checkboxes {
+  float: right;
+}
+
+.checkboxes > div {
+  float: left;
+  width: 30px;
+  height: 30px;
+  background: whitesmoke;
+  border: 2px solid lightgrey;
+  margin-right: 45px;
+  background-repeat: no-repeat;
+  background-position: 1px 2px;
+  opacity: 0.8;
+}
+
+.checkboxes > div:hover {
+  cursor: pointer;
+}
+
+#up {
+  background-image: url('../images/up_arrow_2.png');
+}
+
+#down {
+  background-image: url('../images/down_arrow_2.png');
+}
+
+#unknown {
+  background-image: url('../images/question_mark.png');
+  background-position: 5px 2px;
+}
+
+#search {
+  float: left;
+  height: 30px;
+  width: 530px;
+  background-image: url('../images/search_icon.png');
+  background-position: 565px 2px;
+  background-repeat: no-repeat;
+  border: 2px solid lightgrey;
+  padding: 0 35px;
+  text-align: right;
+  margin-right: 50px;
+  font-size: 2em;
+  font-weight: bold;
+  color: grey;
+}
+
+#search:focus {
+  background-image: url();
+  background-color: #eef1f4;
+
+}
+
+.bosses > li {
+  margin-top: 20px;
+  background: #a8c0aa;
+  border-radius: 10px;
+
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.4), 2px 2px 2px rgba(0, 0, 0, 0.4);
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 61%, rgba(0, 0, 0, 0.04));
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 61%, rgba(0, 0, 0, 0.04));
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 61%, rgba(0, 0, 0, 0.04));
+  background-image: linear-gradient(top, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0) 40%, rgba(0, 0, 0, 0.12) 61%, rgba(0, 0, 0, 0.04));
+}
+
+.bosses > li:hover {
+  cursor: pointer;
+}
+
+.boss > img {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+}
+
+.boss > .name {
+  padding-left: 50px;
+  padding-top: 60px;
+  font-size: 2em;
+  font-weight: bold;
+  color: #3f4554;
+}
+
+.boss > img, .boss > .name {
+  float: left;
+}
+
+.dropdown {
+  display: none;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
